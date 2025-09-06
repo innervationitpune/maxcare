@@ -18,12 +18,22 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col relative">
+      {/* Loader */}
       <Loader loading={loading} />
+
+      {/* Scroll to top */}
       <ScrollToTop />
-      <div className={`transition-all duration-300 ease-in-out ${
-        loading ? 'opacity-50 pointer-events-none' : 'opacity-100'
-      }`}>
+
+      {/* Main content */}
+      <div
+        className={`transition-all duration-300 ease-in-out ${
+          loading ? 'opacity-50 pointer-events-none' : 'opacity-100'
+        }`}
+      >
+        {/* Header */}
         <Header />
+
+        {/* Page Routes */}
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -35,6 +45,8 @@ function App() {
             <Route path="/book-appointment" element={<BookAppointment />} />
           </Routes>
         </main>
+
+        {/* Footer */}
         <Footer />
       </div>
     </div>
