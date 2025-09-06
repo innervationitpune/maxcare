@@ -26,7 +26,7 @@ const Contact = () => {
     `Message:\n${formData.message}`
   );
 
-  const mailtoLink = `mailto:admin@berkshirepainclinic.co.uk@gmail.com?subject=${subject}&body=${body}`;
+  const mailtoLink = `mailto:painspecialist9@gmail.com?subject=${subject}&body=${body}`;
 
   window.location.href = mailtoLink;
     alert('Thank you for your message. We will get back to you soon!');
@@ -92,7 +92,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="font-medium text-[#567c8d]">
-                          admin@berkshirepainclinic.co.uk
+                          painspecialist9@gmail.com
                         </p>
                         <p className="text-[#567c8d]">Email Address</p>
                       </div>

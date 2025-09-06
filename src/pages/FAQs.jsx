@@ -108,7 +108,7 @@ const FAQs = () => {
               Call Us: 07777106344
             </a>
             <a
-              href="mailto:admin@berkshirepainclinic.co.uk"
+              href="mailto:painspecialist9@gmail.com"
               className="border-2 border-[#F5EFEB] text-[#F5EFEB] px-6 py-3 rounded-full font-semibold hover:bg-[#F5EFEB] hover:text-[#567c8d] transition-all duration-300 text-center"
             >
               Email Us

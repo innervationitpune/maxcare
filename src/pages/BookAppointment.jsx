@@ -39,7 +39,7 @@ const BookAppointment = () => {
 
   );
 
-  const mailtoLink = `mailto:admin@berkshirepainclinic.co.uk@gmail.com?subject=${subject}&body=${body}`;
+  const mailtoLink = `mailto:painspecialist9@gmail.com?subject=${subject}&body=${body}`;
 
   window.location.href = mailtoLink;
     
@@ -129,7 +129,7 @@ const BookAppointment = () => {
               Send us your appointment request and we'll get back to you
             </p>
             <a
-              href="mailto:admin@berkshirepainclinic.co.uk@gmail.com"
+              href="mailto:painspecialist9@gmail.com"
               className="bg-[#F5EFEB] text-[#2f4156] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center w-full sm:w-auto space-x-2"
             >
               <Mail className="h-4 w-4" />
