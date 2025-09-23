@@ -8,15 +8,8 @@ const Information = () => {
       title: 'Pain Medications',
       icon: Pill,
       description:
-        'Comprehensive guides about different pain medications, their uses, and side effects.',
-      items: [
-        { label: 'Amitriptyline', link: '/pdfs/pain-medications/Amitriptyline%20leaflet.pdf' },
-        { label: 'Gabapentin', link: '/pdfs/pain-medications/Gabapentin%20leaflet.pdf' },
-        { label: 'Nortriptyline', link: '/pdfs/pain-medications/Nortriptyline%20leaflet.pdf' },
-        { label: 'NSAID PIL', link: '/pdfs/pain-medications/NSAID%20PIL%202023%20update.pdf' },
-        { label: 'Pregabalin', link: '/pdfs/pain-medications/Pregabalin%20leaflet.pdf' },
-        { label: 'QR-Codes Pain Medications', link: '/pdfs/pain-medications/QR-Codes%20pain%20medications%20information.pdf' },
-      ],
+        'We would advise and rationalize the medication options that are evidence based and relevant to your medical condition.',
+      items: [], // No items for this card
     },
     {
       title: 'Injection Procedures',
@@ -24,15 +17,15 @@ const Information = () => {
       description:
         'Detailed information about various injection procedures and what to expect.',
       items: [
-        { label: 'Epidural Injection', link: '/pdfs/injection-procedures/Epidural%20injection.pdf' },
-        { label: 'Face Joint Medial Branch Block', link: '/pdfs/injection-procedures/Facet%20joint%20medial%20branch%20block.pdf' },
-        { label: 'General Information', link: '/pdfs/injection-procedures/General%20Information%20-%20injection%20treatments.pdf' },
-        { label: 'Knee Joint Genicular Nerve RF', link: '/pdfs/injection-procedures/Knee%20joint%20genicular%20nerve%20RF%20for.pdf' },
-        { label: 'Occipital Nerve Injection', link: '/pdfs/injection-procedures/Occipital%20nerve%20injection.pdf' },
-        { label: 'Radio Frequency Ablation Injection', link: '/pdfs/injection-procedures/Radio%20Frequency%20Ablation%20injection.pdf' },
-        { label: 'Sacroiliac Injection', link: '/pdfs/injection-procedures/Sacroiliac%20joint%20injection.pdf' },
-        { label: 'Sedation for Pain Procedure', link: '/pdfs/injection-procedures/Sedation%20for%20pain%20procedures.pdf' },
-        { label: 'Trigger Point Injection', link: '/pdfs/injection-procedures/Trigger%20point%20injections.pdf' },
+        { label: 'Epidural Injection' },
+        { label: 'Facet Joint Medial Branch Block' }, // corrected spelling
+        { label: 'General Information' },
+        { label: 'Knee Joint Genicular Nerve RF' },
+        { label: 'Occipital Nerve Injection' },
+        { label: 'Radio Frequency Ablation Injection' },
+        { label: 'Sacroiliac Injection' },
+        { label: 'Nerve Root Block' }, // new item
+        { label: 'Botox Injection' },  // new item
       ],
     },
     {
@@ -97,27 +90,31 @@ const Information = () => {
               <p className="text-[#567c8d] text-sm sm:text-base mb-5">
                 {section.description}
               </p>
-              <div className="space-y-3">
-                {section.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="flex items-center space-x-3">
-                    <FileText className="h-4 w-4 text-[#567c8d] flex-shrink-0" />
-                    {index < 2 ? (
-                      <a
-                        href={item.link}             // PDF link
-                        target="_blank"              // open in new tab for preview
-                        rel="noopener noreferrer"
-                        className="text-[#567c8d] text-sm sm:text-base hover:underline"
-                      >
-                        {item.label}
-                      </a>
-                    ) : (
-                      <span className="text-[#567c8d] text-sm sm:text-base">
-                        {item.label}
-                      </span>
-                    )}
-                  </div>
-                ))}
-              </div>
+
+              {/* Only show items if available */}
+              {section.items.length > 0 && (
+                <div className="space-y-3">
+                  {section.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="flex items-center space-x-3">
+                      <FileText className="h-4 w-4 text-[#567c8d] flex-shrink-0" />
+                      {item.link ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#567c8d] text-sm sm:text-base hover:underline"
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        <span className="text-[#567c8d] text-sm sm:text-base">
+                          {item.label}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -234,3 +231,4 @@ const Information = () => {
 };
 
 export default Information;
+
