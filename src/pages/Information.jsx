@@ -18,14 +18,14 @@ const Information = () => {
         'Detailed information about various injection procedures and what to expect.',
       items: [
         { label: 'Epidural Injection' },
-        { label: 'Facet Joint Medial Branch Block' }, // corrected spelling
+        { label: 'Facet Joint Medial Branch Block' },
         { label: 'General Information' },
         { label: 'Knee Joint Genicular Nerve RF' },
         { label: 'Occipital Nerve Injection' },
         { label: 'Radio Frequency Ablation Injection' },
         { label: 'Sacroiliac Injection' },
-        { label: 'Nerve Root Block' }, // new item
-        { label: 'Botox Injection' },  // new item
+        { label: 'Nerve Root Block' },
+        { label: 'Injections for Headaches' }, // updated (was Botox Injection)
       ],
     },
     {
@@ -231,4 +231,3 @@ const Information = () => {
 };
 
 export default Information;
-
