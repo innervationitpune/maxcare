@@ -68,10 +68,8 @@ const Home = () => {
     'Medial Branch Blocks',
     'Radiofrequency Ablation',
     'Trigger Point Injections',
-    'Botox Injection for Chronic Pain and Headaches',
-    'Qutenza Patch Application',
+    'Injections for Headaches', // ✅ updated
     'Spinal Cord Stimulation Referrals',
-    'Lidocaine/Ketamine Infusion for Chronic Pain',
     'Nerve Root Blocks',
     'Sacroiliac Joint Injections',
     'Sympathetic Nerve Blocks',
@@ -103,7 +101,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Improved Image Styling */}
+        {/* Image */}
         <div className="flex-1 flex justify-center lg:justify-end">
           <div className="rounded-2xl w-72 h-72 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px] overflow-hidden shadow-2xl border-4 border-white">
             <img
