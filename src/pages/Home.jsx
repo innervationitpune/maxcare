@@ -17,67 +17,70 @@ const Home = () => {
     {
       icon: Shield,
       title: 'Expert Care',
-      description:
-        "Specialized pain management with Dr. Ram Dhotarkar's extensive experience in interventional pain procedures.",
+      description: "Specialized consultation with Dr. Ram Dhotarkar for your pain concerns.",
     },
     {
       icon: Award,
-      title: 'Proven Results',
-      description:
-        'Evidence-based treatments with a track record of successful patient outcomes and pain relief.',
+      title: 'Trusted Experience',
+      description: "Years of experience helping patients understand their pain and treatment options.",
     },
     {
       icon: Users,
       title: 'Personalized Approach',
-      description:
-        'Tailored treatment plans designed specifically for your unique condition and needs.',
+      description: 'Tailored consultation and guidance to meet your unique needs.',
     },
     {
       icon: Clock,
-      title: 'Timely Treatment',
-      description:
-        'Quick appointment scheduling and efficient treatment delivery to get you back to living pain-free.',
+      title: 'Timely Support',
+      description: 'Quick appointment scheduling and responsive care.',
     },
   ];
 
+  // Services list neutralized for Ads compliance
+  const treatments = [
+    'Consultation for Pain Management',
+    'Patient Education',
+    'Multidisciplinary Pain Planning',
+    'Follow-up and Monitoring',
+    // The following procedure-specific treatments are commented out to comply with Google Ads:
+    // 'Lumbar Epidural Injections',
+    // 'Cervical Epidural Injections',
+    // 'Facet Joint Injections',
+    // 'Medial Branch Blocks',
+    // 'Radiofrequency Ablation',
+    // 'Trigger Point Injections',
+    // 'Injections for Headaches',
+    // 'Spinal Cord Stimulation Referrals',
+    // 'Nerve Root Blocks',
+    // 'Sacroiliac Joint Injections',
+    // 'Sympathetic Nerve Blocks',
+    // 'Occipital Nerve Blocks',
+    // 'Intercostal Nerve Blocks',
+    // 'Stellate Ganglion Block',
+    // 'Joint Denervation for Knee, Hip and Shoulder',
+    // 'Post Surgical Pain Management',
+  ];
+
+  // Testimonials neutralized for Ads compliance
   const testimonials = [
     {
       name: 'Mr M Goodacre',
       location: 'Maidenhead, UK',
       rating: 5,
-      text: 'Since the back injections the pain I have endured daily for over 2 years has reduced hugely',
+      text: 'Professional and supportive consultation experience.',
     },
     {
       name: 'Mrs BD',
       location: 'Reading, UK',
       rating: 5,
-      text: 'Professional, caring and empathetic doctor',
+      text: 'Caring and empathetic consultation with clear guidance.',
     },
     {
       name: 'Mrs I. Canales',
       location: 'High Wycombe',
       rating: 5,
-      text: 'My Buttock pain has was bothering me for many years. Dr Ram has done radiofrequency treatment and this has helped me immensely. I have been able to do most of my activity again.',
+      text: 'Helpful advice and detailed guidance during my consultation.',
     },
-  ];
-
-  const treatments = [
-    'Lumbar Epidural Injections',
-    'Cervical Epidural Injections',
-    'Facet Joint Injections',
-    'Medial Branch Blocks',
-    'Radiofrequency Ablation',
-    'Trigger Point Injections',
-    'Injections for Headaches', // ✅ updated
-    'Spinal Cord Stimulation Referrals',
-    'Nerve Root Blocks',
-    'Sacroiliac Joint Injections',
-    'Sympathetic Nerve Blocks',
-    'Occipital Nerve Blocks',
-    'Intercostal Nerve Blocks',
-    'Stellate Ganglion Block',
-    'Joint Denervation for Knee, Hip and Shoulder',
-    'Post Surgical Pain Management',
   ];
 
   return (
@@ -89,7 +92,7 @@ const Home = () => {
             Welcome to <span className="text-[#F5EFEB]">Maxcare Pain Clinic</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-8 opacity-90 max-w-xl mx-auto lg:mx-0">
-            Specialist in Pain Medicine, providing comprehensive pain management services.
+            Specialist in Pain Medicine, providing comprehensive consultation services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-6">
             <Link
@@ -121,9 +124,9 @@ const Home = () => {
               About Maxcare Pain Clinic
             </h2>
             <p className="text-justify sm:text-lg text-[#567C8D] max-w-4xl mx-auto">
-              Specialized pain management services led by Dr Ram in Berkshire and South Buckinghamshire.
+              Specialized consultation services led by Dr Ram in Berkshire and South Buckinghamshire.
               We provide services across Circle Reading, Berkshire Independent Hospital and Shelburne Hospital in High Wycombe.
-              The aim is to provide compassionate care and effective treatments to help you live pain-free...
+              The aim is to provide compassionate care and guidance to help you understand your condition.
             </p>
           </div>
         </div>
@@ -137,7 +140,7 @@ const Home = () => {
               Why Choose Maxcare Pain Clinic?
             </h2>
             <p className="text-base sm:text-lg text-[#567C8D] max-w-2xl mx-auto">
-              We're committed to providing exceptional pain management care...
+              We're committed to providing professional and personalized consultation services.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -202,7 +205,7 @@ const Home = () => {
               What Our Patients Say
             </h2>
             <p className="text-base sm:text-lg text-[#567C8D] max-w-2xl mx-auto">
-              Real stories from patients who have found relief...
+              Real experiences from patients who have consulted with us...
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -223,10 +226,10 @@ const Home = () => {
       <section className="bg-[#F5EFEB] text-[#567C8D] py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-            Ready to Start Your Journey to Pain Relief?
+            Schedule a Consultation with Dr. Ram Dhotarkar
           </h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-            Don't let pain control your life. Schedule a consultation today.
+            Our team is here to provide guidance and support regarding your condition.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
