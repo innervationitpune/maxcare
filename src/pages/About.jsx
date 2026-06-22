@@ -74,14 +74,17 @@ const About = () => {
 
         {/* Header Section */}
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between mb-12 sm:mb-16">
+
           {/* Text Content */}
           <div className="lg:w-2/3 text-center lg:text-left mt-8 lg:mt-0">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#567c8d] mb-4">
               About Dr. Ram Dhotarkar
             </h1>
+
             <p className="text-lg sm:text-xl text-[#567c8d] mb-6">
               MBBS, MD, FRCA, EDIC, FFPMRCA
             </p>
+
             <p className="text-base sm:text-lg md:text-xl text-[#567c8d] max-w-3xl">
               Specialist in Pain Medicine with extensive experience in interventional
               pain management and comprehensive patient care.
@@ -100,12 +103,57 @@ const About = () => {
           </div>
         </div>
 
+        {/* Doctify Recognition Section */}
+        <section className="py-12 bg-[#F5EFEB] px-4">
+          <div className="max-w-7xl mx-auto text-center">
+
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#567C8D] mb-4">
+              Recognized on Doctify
+            </h2>
+
+            <p className="text-base sm:text-lg text-[#567C8D] max-w-2xl mx-auto mb-10">
+              Trusted by patients and healthcare professionals.
+            </p>
+
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+
+              <a
+                href="https://www.doctify.com/uk/specialist/ram-dhotarkar#about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="/doctify-patient.png"
+                  alt="Recommended by patients on Doctify"
+                  className="w-full max-w-[380px] rounded-3xl shadow-xl"
+                />
+              </a>
+
+              <a
+                href="https://www.doctify.com/uk/specialist/ram-dhotarkar#about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="/doctify-professional.png"
+                  alt="Endorsed by professionals on Doctify"
+                  className="w-full max-w-[380px] rounded-3xl shadow-xl"
+                />
+              </a>
+
+            </div>
+          </div>
+        </section>
+
         {/* Professional Bio */}
         <div className="bg-[#F5EFEB] rounded-lg shadow-lg p-6 sm:p-8 mb-12">
           <div className="flex items-center mb-6">
             <div className="bg-[#567c8d]/10 rounded-full p-3 sm:p-4">
               <Users className="h-6 w-6 sm:h-8 sm:w-8 text-[#567c8d]" />
             </div>
+
             <h2 className="text-xl sm:text-2xl font-bold text-[#567c8d] ml-4">
               Professional Biography
             </h2>
@@ -127,6 +175,7 @@ const About = () => {
             <div className="bg-[#567c8d]/10 rounded-full p-3 sm:p-4">
               <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-[#567c8d]" />
             </div>
+
             <h2 className="text-xl sm:text-2xl font-bold text-[#567c8d] ml-4">
               Qualifications
             </h2>
@@ -136,6 +185,7 @@ const About = () => {
             {qualifications.map((qualification, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <Award className="h-4 w-4 sm:h-5 sm:w-5 text-[#567c8d] mt-1 flex-shrink-0" />
+
                 <span className="text-[#567c8d] text-sm sm:text-base">
                   {qualification}
                 </span>
@@ -150,6 +200,7 @@ const About = () => {
             <div className="bg-[#567c8d]/10 rounded-full p-3 sm:p-4">
               <Calendar className="h-6 w-6 sm:h-8 sm:w-8 text-[#567c8d]" />
             </div>
+
             <h2 className="text-xl sm:text-2xl font-bold text-[#567c8d] ml-4">
               Positions Held
             </h2>
@@ -164,16 +215,19 @@ const About = () => {
                 <h3 className="text-lg sm:text-xl font-semibold text-[#567c8d]">
                   {position.title}
                 </h3>
+
                 {position.organization && (
                   <p className="text-[#567c8d] font-medium text-sm sm:text-base">
                     {position.organization}
                   </p>
                 )}
+
                 {position.period && (
                   <p className="text-[#567c8d] text-xs sm:text-sm mb-2">
                     {position.period}
                   </p>
                 )}
+
                 {position.description && (
                   <p className="text-[#567c8d] text-sm sm:text-base">
                     {position.description}
@@ -190,6 +244,7 @@ const About = () => {
             <div className="bg-[#567c8d]/10 rounded-full p-3 sm:p-4">
               <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-[#567c8d]" />
             </div>
+
             <h2 className="text-xl sm:text-2xl font-bold text-[#567c8d] ml-4">
               Professional Affiliations
             </h2>
@@ -199,6 +254,7 @@ const About = () => {
             {affiliations.map((affiliation, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <Users className="h-4 w-4 sm:h-5 sm:w-5 text-[#567c8d] mt-1 flex-shrink-0" />
+
                 <span className="text-[#567c8d] text-sm sm:text-base">
                   {affiliation}
                 </span>
@@ -213,6 +269,7 @@ const About = () => {
             <div className="bg-[#567c8d]/10 rounded-full p-3 sm:p-4">
               <Award className="h-6 w-6 sm:h-8 sm:w-8 text-[#567c8d]" />
             </div>
+
             <h2 className="text-xl sm:text-2xl font-bold text-[#567c8d] ml-4">
               Areas of Expertise
             </h2>
@@ -231,6 +288,7 @@ const About = () => {
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );

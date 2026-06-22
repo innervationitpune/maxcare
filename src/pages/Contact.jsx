@@ -18,59 +18,127 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const subject = encodeURIComponent("New Contact Form Submission");
-  const body = encodeURIComponent(
-    `Full Name: ${formData.name}\n` +
-    `Phone: ${formData.phone}\n` +
-    `Email: ${formData.email}\n` +
-    `Message:\n${formData.message}`
-  );
 
-  const mailtoLink = `mailto:painspecialist9@gmail.com?subject=${subject}&body=${body}`;
+    const body = encodeURIComponent(
+      `Full Name: ${formData.name}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Email: ${formData.email}\n` +
+      `Message:\n${formData.message}`
+    );
 
-  window.location.href = mailtoLink;
+    const mailtoLink = `mailto:painspecialist9@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+
     alert('Thank you for your message. We will get back to you soon!');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+    });
   };
 
   return (
     <div className="py-16 bg-[#F5EFEB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#F5EFEB]">
+
         {/* Header */}
         <div className="text-center mb-16">
+
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#567c8d] mb-4 sm:mb-6">
             Contact Us
           </h1>
+
           <p className="text-lg sm:text-xl text-[#567c8d] max-w-3xl mx-auto">
             Get in touch with our team to schedule an appointment or ask any
             questions about our services
           </p>
+
         </div>
 
+        {/* Doctify Recognition Section */}
+        <section className="py-12 bg-[#F5EFEB] px-4">
+          <div className="max-w-7xl mx-auto text-center">
+
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#567C8D] mb-4">
+              Recognized on Doctify
+            </h2>
+
+            <p className="text-base sm:text-lg text-[#567C8D] max-w-2xl mx-auto mb-10">
+              Trusted by patients and healthcare professionals.
+            </p>
+
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+
+              <a
+                href="https://www.doctify.com/uk/specialist/ram-dhotarkar#about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="/doctify-patient.png"
+                  alt="Recommended by patients on Doctify"
+                  className="w-full max-w-[380px] rounded-3xl shadow-xl"
+                />
+              </a>
+
+              <a
+                href="https://www.doctify.com/uk/specialist/ram-dhotarkar#about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="/doctify-professional.png"
+                  alt="Endorsed by professionals on Doctify"
+                  className="w-full max-w-[380px] rounded-3xl shadow-xl"
+                />
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Main Contact Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
+
               <h2 className="text-2xl font-bold text-[#567c8d] mb-6">
                 Get in Touch
               </h2>
 
               <div className="space-y-6">
+
                 {/* Practice Manager */}
                 <div className="bg-[#F5EFEB] rounded-lg shadow-lg p-6">
+
                   <h3 className="text-lg font-semibold text-[#567c8d] mb-4">
                     Practice Manager
                   </h3>
+
                   <div className="space-y-4">
+
                     <div className="flex items-start sm:items-center space-x-4">
                       <div className="bg-[#567c8d]/10 rounded-full p-3">
                         <Mail className="h-6 w-6 text-[#567c8d]" />
                       </div>
+
                       <div>
                         <p className="font-medium text-[#567c8d]">
                           Ms Nicola Pizzey
                         </p>
-                        <p className="text-[#567c8d]">Practice Manager</p>
+
+                        <p className="text-[#567c8d]">
+                          Practice Manager
+                        </p>
                       </div>
                     </div>
 
@@ -78,11 +146,15 @@ const Contact = () => {
                       <div className="bg-[#567c8d]/10 rounded-full p-3">
                         <Phone className="h-6 w-6 text-[#567c8d]" />
                       </div>
+
                       <div>
                         <p className="font-medium text-[#567c8d]">
                           07777106344
                         </p>
-                        <p className="text-[#567c8d]">Direct Line</p>
+
+                        <p className="text-[#567c8d]">
+                          Direct Line
+                        </p>
                       </div>
                     </div>
 
@@ -90,22 +162,29 @@ const Contact = () => {
                       <div className="bg-[#567c8d]/10 rounded-full p-3">
                         <Mail className="h-6 w-6 text-[#567c8d]" />
                       </div>
+
                       <div>
                         <p className="font-medium text-[#567c8d]">
                           painspecialist9@gmail.com
                         </p>
-                        <p className="text-[#567c8d]">Email Address</p>
+
+                        <p className="text-[#567c8d]">
+                          Email Address
+                        </p>
                       </div>
                     </div>
+
                   </div>
                 </div>
 
                 {/* Opening Hours */}
                 <div className="bg-[#567c8d] rounded-lg shadow-lg p-6">
+
                   <div className="flex items-center mb-4">
                     <div className="bg-[#567c8d]/10 rounded-full p-3">
                       <Clock className="h-6 w-6 text-[#F5efeb]" />
                     </div>
+
                     <h3 className="text-lg font-semibold text-[#F5efeb] ml-4">
                       Opening Hours
                     </h3>
@@ -114,10 +193,12 @@ const Contact = () => {
                   <div className="space-y-3">
                     {[
                       ['Monday - Friday', '9:00 AM - 6:00 PM'],
-                      
                     ].map(([day, time], i) => (
                       <div key={i} className="flex justify-between items-center">
-                        <span className="text-[#F5EFEB]">{day}</span>
+                        <span className="text-[#F5EFEB]">
+                          {day}
+                        </span>
+
                         <span className="font-medium text-[#567c8d]">
                           {time}
                         </span>
@@ -128,10 +209,12 @@ const Contact = () => {
 
                 {/* Updated Multiple Locations */}
                 <div className="bg-[#F5efeb] rounded-lg shadow-lg p-6 space-y-8">
+
                   <div className="flex items-center mb-4">
                     <div className="bg-[#567c8d]/10 rounded-full p-3">
                       <MapPin className="h-6 w-6 text-[#567c8d]" />
                     </div>
+
                     <h3 className="text-lg font-semibold text-[#567c8d] ml-4">
                       Clinic Locations
                     </h3>
@@ -158,9 +241,19 @@ const Contact = () => {
                     },
                   ].map((loc, idx) => (
                     <div key={idx} className="bg-white rounded-md p-4 shadow">
-                      <h4 className="text-md font-bold text-[#567c8d]">{loc.name}</h4>
-                      <p className="text-[#567c8d]">{loc.address}</p>
-                      <p className="text-[#567c8d] font-medium">Phone: {loc.phone}</p>
+
+                      <h4 className="text-md font-bold text-[#567c8d]">
+                        {loc.name}
+                      </h4>
+
+                      <p className="text-[#567c8d]">
+                        {loc.address}
+                      </p>
+
+                      <p className="text-[#567c8d] font-medium">
+                        Phone: {loc.phone}
+                      </p>
+
                       <a
                         href={loc.mapLink}
                         target="_blank"
@@ -169,8 +262,10 @@ const Contact = () => {
                       >
                         View on Google Maps
                       </a>
+
                     </div>
                   ))}
+
                 </div>
               </div>
             </div>
@@ -178,18 +273,26 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div>
+
             <h2 className="text-2xl font-bold text-[#567c8d] mb-6">
               Send us a Message
             </h2>
+
             <form
               onSubmit={handleSubmit}
               className="bg-[#F5efeb] rounded-lg shadow-lg p-6 sm:p-8 space-y-6"
             >
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-[#567c8d] mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-[#567c8d] mb-1"
+                  >
                     Full Name <span className="text-red-500">*</span>
                   </label>
+
                   <input
                     type="text"
                     id="name"
@@ -203,9 +306,13 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-[#567c8d] mb-1">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-[#567c8d] mb-1"
+                  >
                     Phone Number
                   </label>
+
                   <input
                     type="tel"
                     id="phone"
@@ -216,12 +323,17 @@ const Contact = () => {
                     placeholder="Enter your phone number"
                   />
                 </div>
+
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[#567c8d] mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-[#567c8d] mb-1"
+                >
                   Email Address <span className="text-red-500">*</span>
                 </label>
+
                 <input
                   type="email"
                   id="email"
@@ -235,9 +347,13 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[#567c8d] mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-[#567c8d] mb-1"
+                >
                   Message <span className="text-red-500">*</span>
                 </label>
+
                 <textarea
                   id="message"
                   name="message"
@@ -261,23 +377,28 @@ const Contact = () => {
               <p className="text-sm text-[#567c8d] mt-2">
                 <span className="text-red-500">*</span> Required fields. We'll get back to you within 24 hours.
               </p>
+
             </form>
           </div>
         </div>
 
         {/* Emergency Contact */}
         <div className="mt-16 bg-red-100 border border-red-200 rounded-lg p-6 sm:p-8 text-center">
+
           <h3 className="text-xl font-bold text-red-800 mb-4">
             Emergency Contact
           </h3>
+
           <p className="text-red-700 mb-4">
             For medical emergencies, please contact your GP or visit your
             nearest A&E department. This contact form is not monitored 24/7 and
             should not be used for urgent medical matters.
           </p>
+
           <p className="text-red-700">
             <strong>Emergency Services:</strong> 999 or 112
           </p>
+
         </div>
       </div>
     </div>
